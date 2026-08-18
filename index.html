@@ -106,7 +106,7 @@ header.nav.scrolled{background:rgba(5,13,31,.97);box-shadow:0 10px 34px rgba(3,8
 .mq-track span i{color:var(--blue2);font-style:normal;margin-right:56px}
 @keyframes mq{to{transform:translateX(-50%)}}
 
-/* ===== RIBBON UNIDAD DE LA SEMANA (S) ===== */
+/* ===== RIBBON ===== */
 .ribbon{background:linear-gradient(90deg,var(--n800),var(--blue) 50%,var(--n800));color:#fff;padding:15px 0;position:relative;overflow:hidden}
 .rb-in{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
 .rb-dot{width:10px;height:10px;border-radius:50%;background:#7CFCB4;box-shadow:0 0 0 0 rgba(124,252,180,.7);animation:rb 1.6s infinite;flex-shrink:0}
@@ -192,7 +192,6 @@ section{padding:100px 0}
 @media(max-width:640px){.car-grid{grid-template-columns:1fr}.car.feat{grid-column:auto}.car-grid.list .car{flex-direction:column}.car-grid.list .car-img{width:100%;aspect-ratio:16/10}}
 .empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:#7386A6;background:#fff;border:1.5px dashed var(--line);border-radius:var(--r)}
 .empty b{display:block;font-size:19px;color:var(--ink);margin-bottom:8px}
-/* micro-conversión (E) */
 .lead-band{margin-top:34px;background:var(--ice);border:1.5px dashed rgba(30,90,232,.45);border-radius:var(--r);padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .lead-band b{color:var(--ink);font-size:17px}
 .lead-band p{font-size:13.5px;margin-top:5px;max-width:560px}
@@ -261,7 +260,7 @@ input[type=range]{width:100%;accent-color:var(--blue2);height:6px;cursor:pointer
 .step-v p{font-size:14.5px;line-height:1.7}
 @media(max-width:960px){.proc-grid{grid-template-columns:1fr}.proc-img{position:static;height:340px}}
 
-/* ===== OPINIONES + GOOGLE (T) ===== */
+/* ===== OPINIONES ===== */
 #opiniones{background:var(--n900);color:#fff}
 .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .t-card{background:var(--n800);border:1px solid var(--lined);border-radius:var(--r);padding:30px 28px;position:relative;transition:.3s}
@@ -279,7 +278,7 @@ input[type=range]{width:100%;accent-color:var(--blue2);height:6px;cursor:pointer
 .g-band .btn{margin-left:auto}
 @media(max-width:960px){.t-grid{grid-template-columns:1fr}.g-band .btn{margin-left:0}}
 
-/* ===== ENTREGAS RECIENTES (T) ===== */
+/* ===== ENTREGAS ===== */
 #entregas{background:var(--paper)}
 .e-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .e-card{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line);transition:.3s}
@@ -349,8 +348,8 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
 .mob-bar a{flex:1;justify-content:center}
 @media(max-width:760px){.mob-bar{display:flex}.wa-float{bottom:82px}}
 
-/* ===== MODALES ===== */
-.modal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:20px}
+/* ===== MODALES — FIX: z-index 110 para quedar POR ENCIMA del panel admin (95) ===== */
+.modal{position:fixed;inset:0;z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
 .modal.open{display:flex}
 .modal-bg{position:absolute;inset:0;background:rgba(5,13,31,.85);backdrop-filter:blur(6px)}
 .modal-card{position:relative;background:#fff;border-radius:20px;max-width:880px;width:100%;max-height:92vh;overflow:auto;animation:pop .35s cubic-bezier(.2,1.4,.4,1)}
@@ -373,7 +372,6 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
 .cm-price{font-family:'Sora';font-size:31px;font-weight:700;color:var(--blue);margin-bottom:20px}
 .cm-acts{display:grid;gap:10px}
 @media(max-width:820px){.cm-grid{grid-template-columns:1fr}.cm-img{min-height:250px}}
-/* expediente (I) */
 .exp{padding:40px 36px}
 .exp h3{font-size:23px;color:var(--ink);margin-bottom:4px}
 .exp .sub{font-size:13px;color:#7386A6;margin-bottom:20px}
@@ -439,7 +437,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
 .sh{padding:38px 34px}
 .sh h3{font-size:22px;color:var(--ink);margin-bottom:6px}
 .sh .sub{font-size:13px;color:#7386A6;margin-bottom:18px}
-.sh textarea{width:100%;min-height:200px;border:1.5px solid var(--line);border-radius:13px;padding:16px;font-size:13.5px;line-height:1.7;font-family:inherit;background:var(--ice);outline:none;resize:vertical}
+.sh textarea{width:100%;min-height:210px;border:1.5px solid var(--line);border-radius:13px;padding:16px;font-size:13.5px;line-height:1.7;font-family:inherit;background:var(--ice);outline:none;resize:vertical}
 .sh-acts{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
 .sh-photos{display:flex;gap:10px;flex-wrap:wrap}
 .sh-photos a{position:relative;display:block}
@@ -451,8 +449,8 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
 .cf h3{font-size:21px;color:var(--ink);margin-bottom:10px}
 .cf p{font-size:14px;line-height:1.7;margin-bottom:24px}
 .cf-acts{display:flex;gap:12px;justify-content:center}
-/* toast */
-.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,80px);z-index:120;background:var(--n800);color:#fff;padding:15px 28px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 16px 40px rgba(0,0,0,.45);transition:.4s;border-left:4px solid var(--blue2);opacity:0}
+/* toast — por encima de todo */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,80px);z-index:130;background:var(--n800);color:#fff;padding:15px 28px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 16px 40px rgba(0,0,0,.45);transition:.4s;border-left:4px solid var(--blue2);opacity:0}
 .toast.show{transform:translate(-50%,0);opacity:1}
 /* reveal */
 .reveal{opacity:0;transform:translateY(34px);transition:.8s cubic-bezier(.2,.7,.3,1)}
@@ -538,7 +536,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   </div>
 </div>
 
-<!-- ══════════ RIBBON UNIDAD DE LA SEMANA (S·1) ══════════ -->
+<!-- ══════════ RIBBON ══════════ -->
 <div class="ribbon" id="ribbon" hidden>
   <div class="wrap rb-in">
     <span class="rb-dot"></span>
@@ -604,7 +602,6 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
       <span class="f-count" id="fCount"></span>
     </div>
     <div class="car-grid" id="carGrid"></div>
-    <!-- micro-conversión fríos (E·7) -->
     <div class="lead-band reveal">
       <div>
         <b>📥 ¿Aún comparando?</b>
@@ -722,7 +719,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   </div>
 </section>
 
-<!-- ══════════ OPINIONES + GOOGLE ══════════ -->
+<!-- ══════════ OPINIONES ══════════ -->
 <section id="opiniones" class="dark">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -734,7 +731,6 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
       <div class="t-card reveal"><span class="t-quote">”</span><div class="st">★★★★★</div><p>“Me enseñaron el historial de mantenimientos Carfix y el kilometraje original tal cual lo anunciaban. A los 3 meses usé la garantía por escrito y respondieron sin peros. Así da gusto.”</p><div class="t-who"><span class="t-av">AM</span><div><b>Alejandra M.</b><small>Compró sedán · Mérida, Yucatán</small></div></div></div>
       <div class="t-card reveal"><span class="t-quote">”</span><div class="st">★★★★★</div><p>“Consignamos nuestro auto con ellos y el trato fue impecable: avalúo justo, contrato claro y venta rápida. Ya volvimos por el segundo vehículo de la familia.”</p><div class="t-who"><span class="t-av">FC</span><div><b>Familia Castillo</b><small>Vendió y compró · Mérida, Yucatán</small></div></div></div>
     </div>
-    <!-- reseñas Google verificables (T·5) -->
     <div class="g-band reveal">
       <span class="g-stars">★★★★★</span>
       <div><b>4.9 en Google · Opiniones reales de compradores en Mérida</b><p>Léelas antes de decidir: la confianza se verifica, no se promete.</p></div>
@@ -743,7 +739,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   </div>
 </section>
 
-<!-- ══════════ ENTREGAS RECIENTES (T·6) ══════════ -->
+<!-- ══════════ ENTREGAS ══════════ -->
 <section id="entregas">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -894,7 +890,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   </div>
 </div>
 
-<!-- ══════════ MODAL EXPEDIENTE (I·4) ══════════ -->
+<!-- ══════════ MODAL EXPEDIENTE ══════════ -->
 <div class="modal" id="expModal">
   <div class="modal-bg" data-close></div>
   <div class="modal-card exp">
@@ -950,7 +946,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   </div>
   <div class="ad-wrap">
     <div class="ad-guide">
-      <b>🚀 Guía rápida:</b> 1· <b>➕ Agregar vehículo</b> con foto de portada, hasta 6 fotos y <b>precio de agencia</b> opcional (muestra el ahorro “💚 Ahorras $X” en la tarjeta). 2· <b>⭐ Destacado</b>: aparece primero, grande y como <b>Unidad de la semana</b> en la cinta superior. 3· <b>📤 Compartir</b>: texto con emojis + ahorro, fotos descargables y botones a Facebook, Instagram, WhatsApp y panel nativo. 4· <b>🔴 VENDIDO</b>: sigue visible con etiqueta. 5· <b>⚙️ Ajustes</b>: WhatsApp y video del hero. 6· <b>Novedades S.I.T.E.</b>: la cinta de escasez, el ancla de ahorro, el expediente Carfix en la ficha, los días en lote (“🕓 X días”) y los favoritos ♥ ya funcionan solos en el sitio.
+      <b>🚀 Guía rápida:</b> 1· <b>➕ Agregar vehículo</b> con foto de portada, hasta 6 fotos y <b>precio de agencia</b> opcional (muestra “💚 Ahorras $X”). 2· <b>⭐ Destacado</b>: primero, grande y como <b>Unidad de la semana</b>. 3· <b>📤 Compartir</b>: ventana con descripción con emojis organizada por bloques, fotos descargables y botones a Facebook, Instagram, WhatsApp y panel nativo. 4· <b>🔴 VENDIDO</b>: sigue visible con etiqueta. 5· <b>✏️ Editar</b>: abre el formulario con todos los datos cargados y al guardar se actualiza el sitio al instante. 6· <b>⚙️ Ajustes</b>: WhatsApp y video del hero.
     </div>
     <div class="ad-stats" id="adStats"></div>
     <div class="ad-bar">
@@ -1021,7 +1017,7 @@ footer{background:var(--n950);color:#8FA3C4;padding:74px 0 0}
   <div class="modal-card sh">
     <button class="mx" data-close>✕</button>
     <h3>📣 Ventana de publicación</h3>
-    <p class="sub">Texto con emojis listo para copiar · fotos para descargar y adjuntar · accesos directos a tus redes.</p>
+    <p class="sub">Texto con emojis organizado por bloques, listo para copiar · fotos para descargar y adjuntar · accesos directos a tus redes.</p>
     <textarea id="shText"></textarea>
     <div class="sh-acts">
       <button class="btn btn-navy btn-sm" id="shCopy">📋 Copiar texto</button>
@@ -1069,7 +1065,7 @@ function initLogos(scope){
 }
 initLogos();
 
-/* ═══════════ DATOS (con ancla de ahorro y días en lote) ═══════════ */
+/* ═══════════ DATOS ═══════════ */
 const IMG={
  b430:'https://image.qwenlm.ai/public_source/31cbe473-d181-4851-a83a-b44e47260c21/1bc4a436b-4f23-45c7-8dd5-c8505cb0b15a.png',
  b320:'https://image.qwenlm.ai/public_source/31cbe473-d181-4851-a83a-b44e47260c21/1b177cbcf-7660-44b1-a427-1ea7a8f7b8c4.png',
@@ -1115,7 +1111,6 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 $$('.reveal').forEach(el=>io.observe(el));
 const ioC=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;ioC.unobserve(e.target);const el=e.target,end=+el.dataset.n,suf=el.dataset.suf||'',t0=performance.now();if(end===0){el.textContent='0';return;}const step=t=>{const p=Math.min(1,(t-t0)/1400),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=fmt(v)+suf;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}),{threshold:.5});
 $$('.num').forEach(el=>ioC.observe(el));
-/* Hero video: URL de ajustes → si no, intenta image/hero.mp4 local → si no, imagen */
 function applyHeroVideo(){
   const bg=$('#heroBg');bg.querySelectorAll('video.hvideo').forEach(v=>v.remove());
   const v=document.createElement('video');
@@ -1130,7 +1125,7 @@ function openM(id){const m=$('#'+id);m.classList.add('open');document.body.style
 function closeM(id){$('#'+id).classList.remove('open');if(!$$('.modal.open').length&&!$('#adminDash').classList.contains('open'))document.body.style.overflow='';}
 $$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target.hasAttribute('data-close')||e.target.closest('[data-close]'))closeM(m.id);}));
 
-/* ═══════════ CINTA UNIDAD DE LA SEMANA (S·1) ═══════════ */
+/* ═══════════ CINTA UNIDAD DE LA SEMANA ═══════════ */
 function renderRibbon(){
   const v=vehicles.find(x=>x.dest&&!x.sold)||vehicles.find(x=>x.nuevo&&!x.sold)||vehicles.find(x=>!x.sold);
   const r=$('#ribbon');
@@ -1140,7 +1135,7 @@ function renderRibbon(){
   $('#rbBtn').onclick=()=>openCar(v.id);
 }
 
-/* ═══════════ CATÁLOGO + FAVORITOS (E·8) ═══════════ */
+/* ═══════════ CATÁLOGO + FAVORITOS ═══════════ */
 const grid=$('#carGrid');let view='grid',favOnly=false;
 [...new Set(vehicles.map(v=>v.marca))].sort().forEach(m=>$('#fMarca').insertAdjacentHTML('beforeend',`<option>${esc(m)}</option>`));
 function filterCars(){
@@ -1239,7 +1234,6 @@ function openCar(id){
   $('#cmTest').href=waLink(`Hola CAR MART 👋 Quiero agendar una prueba de manejo del ${v.marca} ${v.modelo} ${v.anio}. ¿Qué horarios tienen disponibles?`);
   openM('carModal');
 }
-/* Expediente Carfix (I·4) */
 $('#cmExp').onclick=()=>{
   if(!curCar)return;
   $('#expTitle').textContent=`📄 Expediente · ${curCar.marca} ${curCar.modelo} ${curCar.anio}`;
@@ -1263,7 +1257,7 @@ function calc(){
 $$('#cPlazos button').forEach(b=>b.onclick=()=>{plazo=+b.dataset.n;$$('#cPlazos button').forEach(x=>x.classList.remove('on'));b.classList.add('on');calc();});
 calc();
 
-/* ═══════════ ADMIN ═══════════ */
+/* ═══════════ ADMIN (FIX: modales ahora visibles encima del panel) ═══════════ */
 $$('[data-admin]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();sessionStorage.getItem('cm_admin')?openDash():openM('loginModal');}));
 $('#loginForm').onsubmit=e=>{e.preventDefault();
   if($('#alUser').value.trim()==='dueno'&&$('#alPass').value==='carmart2026'){sessionStorage.setItem('cm_admin','1');closeM('loginModal');$('#alErr').textContent='';openDash();toast('✅ Bienvenido al panel Car Mart');}
@@ -1283,7 +1277,7 @@ function renderAdmin(){
      <div class="ad-acts">
        <button class="ab ${v.dest?'on':''}" data-act="feat" data-id="${v.id}" title="Destacar / Unidad de la semana">⭐</button>
        <button class="ab ${v.sold?'sold-on':''}" data-act="sold" data-id="${v.id}" title="Disponible / Vendido">🔴</button>
-       <button class="ab" data-act="share" data-id="${v.id}" title="Compartir">📤</button>
+       <button class="ab" data-act="share" data-id="${v.id}" title="Compartir publicación">📤</button>
        <button class="ab" data-act="edit" data-id="${v.id}" title="Editar">✏️</button>
        <button class="ab" data-act="del" data-id="${v.id}" title="Eliminar">🗑️</button>
      </div>
@@ -1295,9 +1289,9 @@ $('#adList').addEventListener('click',e=>{
   const act=b.dataset.act;
   if(act==='feat'){const on=!v.dest;vehicles.forEach(x=>x.dest=false);v.dest=on;saveV();renderAdmin();renderCatalog();toast(on?'⭐ Destacado + Unidad de la semana':'Destacado quitado');}
   if(act==='sold'){v.sold=!v.sold;saveV();renderAdmin();renderCatalog();toast(v.sold?'🔴 Marcado como VENDIDO':'🟢 Marcado como disponible');}
-  if(act==='edit')openVehForm(v);
-  if(act==='share')openShare(v);
-  if(act==='del')confirmBox('🗑️ Eliminar vehículo',`¿Eliminar definitivamente ${v.marca} ${v.modelo} ${v.anio} del catálogo? Esta acción no se puede deshacer.`,()=>{vehicles=vehicles.filter(x=>x.id!==id);saveV();renderAdmin();renderCatalog();toast('🗑️ Vehículo eliminado');},'🗑️ Sí, eliminar');
+  if(act==='edit'){openVehForm(v);}
+  if(act==='share'){openShare(v);}
+  if(act==='del')confirmBox('🗑️ Eliminar vehículo',`¿Eliminar definitivamente ${v.marca} ${v.modelo} ${v.anio} del catálogo? Esta acción no se puede deshacer.`,()=>{vehicles=vehicles.filter(x=>x.id!==id);favs.delete(id);saveF();saveV();renderAdmin();renderCatalog();toast('🗑️ Vehículo eliminado');},'🗑️ Sí, eliminar');
 });
 $('#adRestore').onclick=()=>confirmBox('♻️ Restaurar inventario','Se reemplazará el inventario actual por el inventario de ejemplo de Car Mart. ¿Continuar?',()=>{vehicles=JSON.parse(JSON.stringify(DEFAULT_VEHICLES));saveV();renderAdmin();renderCatalog();$('#fMarca').innerHTML='<option value="">Todas las marcas</option>';[...new Set(vehicles.map(v=>v.marca))].sort().forEach(m=>$('#fMarca').insertAdjacentHTML('beforeend',`<option>${esc(m)}</option>`));toast('♻️ Inventario de ejemplo restaurado');},'♻️ Restaurar');
 $('#setSave').onclick=()=>{settings.wa=$('#setWA').value.replace(/\D/g,'')||'529999930928';settings.heroVideo=$('#setVideo').value.trim();saveS();applyHeroVideo();['navWA','heroWA','vendeWA','waFloat','mobWA'].forEach(id=>{const el=document.getElementById(id);if(el)el.href=waLink(WA_GEN);});renderCatalog();toast('💾 Ajustes guardados');};
@@ -1305,13 +1299,18 @@ let cfCb=null;
 function confirmBox(t,m,cb,btn){$('#cfTitle').textContent=t;$('#cfMsg').textContent=m;$('#cfYes').textContent=btn||'Sí, continuar';cfCb=cb;openM('confirmModal');}
 $('#cfYes').onclick=()=>{closeM('confirmModal');cfCb&&cfCb();};
 
-/* ═══════════ FORM VEHÍCULO ═══════════ */
+/* ═══════════ FORM VEHÍCULO (editar carga todos los campos) ═══════════ */
 let tmpCover='',tmpExtra=[];
 function fileToData(file,maxW=1000,q=.8){return new Promise(res=>{const r=new FileReader();r.onload=e=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');const s=Math.min(1,maxW/im.width);c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',q));};im.src=e.target.result;};r.readAsDataURL(file);});}
 function openVehForm(v){
   $('#vehForm').reset();tmpCover=v?v.img:'';tmpExtra=v?[...(v.extra||[])]:[];
   $('#vfId').value=v?v.id:'';$('#vfTitle').textContent=v?'✏️ Editar vehículo':'➕ Agregar vehículo';
-  if(v){$('#vfMarca').value=v.marca;$('#vfModelo').value=v.modelo;$('#vfAnio').value=v.anio;$('#vfTipo').value=v.tipo;$('#vfKm').value=v.km||'';$('#vfPrecio').value=v.precio||'';$('#vfAgencia').value=v.precioAgencia||'';$('#vfTrans').value=v.trans;$('#vfFuel').value=v.fuel;$('#vfMotor').value=v.motor||'';$('#vfDesc').value=v.desc||'';$('#vfSold').checked=!!v.sold;$('#vfDest').checked=!!v.dest;}
+  if(v){
+    $('#vfMarca').value=v.marca;$('#vfModelo').value=v.modelo;$('#vfAnio').value=v.anio;$('#vfTipo').value=v.tipo;
+    $('#vfKm').value=v.km||'';$('#vfPrecio').value=v.precio||'';$('#vfAgencia').value=v.precioAgencia||'';
+    $('#vfTrans').value=v.trans;$('#vfFuel').value=v.fuel;$('#vfMotor').value=v.motor||'';$('#vfDesc').value=v.desc||'';
+    $('#vfSold').checked=!!v.sold;$('#vfDest').checked=!!v.dest;
+  }
   prevPhotos();openM('vehModal');
 }
 function prevPhotos(){
@@ -1333,14 +1332,15 @@ $('#vehForm').onsubmit=e=>{
   if(data.dest)vehicles.forEach(x=>x.dest=false);
   const ix=vehicles.findIndex(x=>x.id===id);
   if(ix>=0){data.nuevo=vehicles[ix].nuevo;vehicles[ix]=data;}else vehicles.unshift(data);
-  saveV();renderCatalog();renderAdmin();closeM('vehModal');toast('💾 Vehículo publicado en el sitio');
+  saveV();renderCatalog();renderAdmin();closeM('vehModal');toast(old?'✏️ Cambios publicados en el sitio':'💾 Vehículo publicado en el sitio');
 };
 
-/* ═══════════ COMPARTIR ═══════════ */
+/* ═══════════ COMPARTIR (texto con emojis organizado por bloques) ═══════════ */
 function shareText(v){
   const p=v.precio?money(v.precio)+' MXN':'Precio a consultar';
   const save=v.precioAgencia&&v.precio?`\n💚 Ahorras ${money(v.precioAgencia-v.precio)} vs precio de agencia`:'';
-  return `🚘 ${v.marca} ${v.modelo} ${v.anio} · CAR MART Mérida\n💰 ${p}${save}\n🛣️ ${fmt(v.km||0)} km · ⚙️ ${v.trans} · ⛽ ${v.fuel}${v.motor?'\n🔧 '+v.motor:''}\n🛡️ Un solo dueño · Kilometraje original\n📜 Garantía por escrito 6 meses / 6,000 km\n🔍 Inspección multipunto Carfix certificada\n📍 Av. Temozón Norte x Calle 14, Mérida\n📲 999 993 0928 · carmart.mx\n\n“Lo que ves es lo que es.”`;
+  const L='━━━━━━━━━━━━━━━━━━';
+  return `🚘 ${v.marca} ${v.modelo} ${v.anio}\n${L}\n💰 ${p}${save}\n🛣️ ${fmt(v.km||0)} km · ⚙️ ${v.trans} · ⛽ ${v.fuel}${v.motor?'\n🔧 '+v.motor:''}\n${L}\n🛡️ Un solo dueño · Kilometraje original\n📜 Garantía por escrito 6 meses / 6,000 km\n🔍 Inspección multipunto Carfix certificada\n${L}\n📍 Av. Temozón Norte x Calle 14, Mérida\n📲 999 993 0928 · carmart.mx\n\n“Lo que ves es lo que es.”`;
 }
 function openShare(v){
   $('#shText').value=shareText(v);
